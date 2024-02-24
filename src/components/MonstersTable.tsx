@@ -6,9 +6,24 @@ import { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import InputText from "./common/InputText";
 
+const columnNameKeys = {
+  Lv: "lv",
+  Name: "name",
+  Hp: "hp",
+  Type: "type",
+  Property: "property",
+  Size: "size",
+  Atk: "atk",
+  Def: "def",
+  Hit: "hit",
+  Matk: "matk",
+  Mdef: "mdef",
+  Flee: "flee",
+} as Record<string, string>;
+
 export function MonstersTable() {
-  const [sortBy, setSortBy] = useState("name");
-  const [sortRule, setSortRule] = useState("");
+  const [sortBy, setSortBy] = useState("");
+  const [sortRule, setSortRule] = useState("ASC" as "ASC" | "DES");
   const [filterTerm, setFilterTerm] = useState("");
 
   return (
@@ -30,6 +45,22 @@ export function MonstersTable() {
       </div>
       <Table>
         <THead
+          sortIcon={{ columnName: sortBy, type: sortRule }}
+          onClick={(columnName) => {
+            setSortBy(columnNameKeys[columnName]);
+            if (sortBy !== columnNameKeys[columnName]) {
+              setSortRule("ASC");
+            } else {
+              switch (sortRule) {
+                case "ASC":
+                  setSortRule("DES");
+                  break;
+                case "DES":
+                  setSortBy("");
+                  break;
+              }
+            }
+          }}
           columnNames={[
             "Lv",
             "Name",
@@ -62,7 +93,23 @@ export function MonstersTable() {
               return false;
             })
             .sort((a, b) => {
-              return a.atk - b.atk;
+              const aProp = (a as any)[sortBy];
+              const bProp = (b as any)[sortBy];
+
+              const type = typeof aProp;
+
+              switch (sortRule) {
+                case "ASC":
+                  if (type === "string") {
+                    return ("" + aProp).localeCompare(bProp);
+                  }
+                  return aProp - bProp;
+                case "DES":
+                  if (type === "string") {
+                    return ("" + bProp).localeCompare(aProp);
+                  }
+                  return bProp - aProp;
+              }
             })
             .map((monster) => {
               return (

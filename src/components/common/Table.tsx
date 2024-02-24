@@ -1,6 +1,7 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 function Table({
   children,
@@ -24,7 +25,15 @@ function Table({
   );
 }
 
-function THead({ columnNames }: { columnNames: string[] }) {
+function THead({
+  columnNames,
+  onClick,
+  sortIcon,
+}: {
+  columnNames: string[];
+  onClick?: (columnName: string) => void;
+  sortIcon?: { columnName: string; type: "ASC" | "DES" };
+}) {
   return (
     <thead className="bg-gray-800">
       <tr>
@@ -33,9 +42,21 @@ function THead({ columnNames }: { columnNames: string[] }) {
             <th
               key={idx}
               scope="col"
-              className="px-3 py-3.5 text-left text-base font-semibold text-gray-100"
+              className={twMerge(
+                "px-3 py-3.5 text-left text-base font-semibold text-gray-100",
+                onClick && "cursor-pointer hover:bg-gray-700"
+              )}
+              onClick={() => {
+                onClick && onClick(name);
+              }}
             >
               {name}
+              {sortIcon?.type === "ASC" && sortIcon?.columnName === name.toLowerCase() && (
+                <ChevronDownIcon width={13} />
+              )}
+              {sortIcon?.type === "DES" && sortIcon?.columnName === name.toLowerCase() && (
+                <ChevronUpIcon width={13} />
+              )}
             </th>
           );
         })}
@@ -52,7 +73,9 @@ function TBody({
   className?: string;
 }) {
   return (
-    <tbody className={twMerge("divide-y divide-gray-300 bg-gray-200", className)}>
+    <tbody
+      className={twMerge("divide-y divide-gray-300 bg-gray-200", className)}
+    >
       {children}
     </tbody>
   );
