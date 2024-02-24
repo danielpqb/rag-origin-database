@@ -9,20 +9,7 @@ import InputText from "./common/InputText";
 export function MonstersTable() {
   const [sortBy, setSortBy] = useState("name");
   const [sortRule, setSortRule] = useState("");
-  const [filter, setFilter] = useState({
-    name: "",
-    lv: "",
-    hp: "",
-    type: "",
-    property: "",
-    size: "",
-    atk: "",
-    def: "",
-    hit: "",
-    matk: "",
-    mdef: "",
-    flee: "",
-  } as Record<string, string>);
+  const [filterTerm, setFilterTerm] = useState("");
 
   return (
     <div>
@@ -35,7 +22,9 @@ export function MonstersTable() {
                 <span className="ml-1">Search</span>
               </>
             }
-            onChange={() => {}}
+            onChange={(e) => {
+              setFilterTerm(e.target.value);
+            }}
           />
         </div>
       </div>
@@ -62,15 +51,15 @@ export function MonstersTable() {
               for (const key in monster) {
                 if (Object.prototype.hasOwnProperty.call(monster, key)) {
                   if (
-                    !String((monster as any)[key])
+                    String((monster as any)[key])
                       .toLowerCase()
-                      .includes(filter[key].toLowerCase())
+                      .includes(filterTerm)
                   ) {
-                    return false;
+                    return true;
                   }
                 }
               }
-              return true;
+              return false;
             })
             .sort((a, b) => {
               return a.atk - b.atk;
