@@ -5,20 +5,20 @@ export const itemsObject: TItems = {
     name: "Acient Mummy Card",
     category: "Secondary",
     description:
-      "Max HP +4.00%. When you take Physical damage, there is a 5% chane to auto cast Lv.5 Signum Crucis.",
+      "Max HP +4.00%.\nWhen you take Physical damage, there is a 5% chane to auto cast Lv.5 Signum Crucis.",
     type: "Card",
   },
   "Acient Strouf Card": {
     name: "Acient Strouf Card",
     category: "Primary weapon",
-    description: "Fixed CT -8.00% Max SP +5.00%",
+    description: "Fixed CT -8.00%\nMax SP +5.00%",
     type: "Card",
   },
   "Ancient Obeaune Card": {
     name: "Ancient Obeaune Card",
     category: "Primary weapon",
     description:
-      "Water Skill Damage +8.00% For every 2 Refinement, +1% Water skill damage",
+      "Water Skill Damage +8.00%\nFor every 2 Refinement, +1% Water skill damage",
     type: "Card",
   },
   "Andre Card": {
@@ -36,21 +36,21 @@ export const itemsObject: TItems = {
   "Baby Desert Wolf Card": {
     name: "Baby Desert Wolf Card",
     category: "Armor",
-    description: "INT +2 MATK +5",
+    description: "INT +2\nMATK +5",
     type: "Card",
   },
   "Baphomet Card": {
     name: "Baphomet Card",
     category: "Primary weapon",
     description:
-      "HIT -10 ASPD +5.00% Normal attacks deals splash damage in a 2.5-meter radius",
+      "HIT -10\nASPD +5.00%\nNormal attacks deals splash damage in a 2.5-meter radius",
     type: "Card",
   },
   "Beetle King Card": {
     name: "Beetle King Card",
     category: "Primary weapon",
     description:
-      "Damage to Fish Monsters +20.00%. Killing an Fish monster restores 5 Magic to you.",
+      "Damage to Fish Monsters +20.00%.\nKilling an Fish monster restores 5 Magic to you.",
     type: "Card",
   },
   "Boa Card": {
@@ -63,39 +63,39 @@ export const itemsObject: TItems = {
     name: "Cat O' Nine Tails Card",
     category: "Shoes",
     description:
-      "MDEF +3 Max HP +4.00% When you take Magic damage, you have a 5% chance to reflect that damage",
+      "MDEF +3\nMax HP +4.00%\nWhen you take Magic damage, you have a 5% chance to reflect that damage",
     type: "Card",
   },
   "Choco Card": {
     name: "Choco Card",
     category: "Cloak",
     description:
-      "FLEE +5 Max HP +3.00% When you take damage, there is a 2% chance to avoid that damage",
+      "FLEE +5\nMax HP +3.00%\nWhen you take damage, there is a 2% chance to avoid that damage",
     type: "Card",
   },
   "Dark Priest Card": {
     name: "Dark Priest Card",
     category: "Primary weapon",
     description:
-      "MDMG +10.00% Your attacks have a 20% chance to take away 10% of your target's max Magic (basic attacks can take away up to 100 Magic while skills can be take away to 300 Magic)",
+      "MDMG +10.00%\nYour attacks have a 20% chance to take away 10% of your target's max Magic (basic attacks can take away up to 100 Magic while skills can be take away to 300 Magic)",
     type: "Card",
   },
   "Dokebi Card": {
     name: "Dokebi Card",
     category: "Armor",
-    description: "DEF +1 You can change you armor to Wind attribute",
+    description: "DEF +1\nYou can change you armor to Wind attribute",
     type: "Card",
   },
   "Doppelganger Card": {
     name: "Doppelganger Card",
     category: "Primary weapon",
-    description: "ASPD +10.00% AGI +5 CRI.DMG +12.00%",
+    description: "ASPD +10.00%\nAGI +5\nCRI.DMG +12.00%",
     type: "Card",
   },
   "Dracula Card": {
     name: "Dracula Card",
     category: "Primary weapon",
-    description: "MATK +100 MDMG +15.00%",
+    description: "MATK +100\nMDMG +15.00%",
     type: "Card",
   },
   "Drainliar Card": {
@@ -108,20 +108,20 @@ export const itemsObject: TItems = {
     name: "Drake Card",
     category: "Primary weapon",
     description:
-      "Neglects the size of a monster and deals 100% damage Damage against all monsters +12%",
+      "Neglects the size of a monster and deals 100% damage\nDamage against all monsters +12%",
     type: "Card",
   },
   "Driller Card": {
     name: "Driller Card",
     category: "Primary weapon",
     description:
-      "Damage to Dragon Monsters +5.00%. Killing a Dragon monster restores 5 Magic to you.",
+      "Damage to Dragon Monsters +5.00%.\nKilling a Dragon monster restores 5 Magic to you.",
     type: "Card",
   },
   "Drops Card": {
     name: "Drops Card",
     category: "Primary weapon",
-    description: "DEX +1 HIT +3 Damage againts Challenging Champions +100",
+    description: "DEX +1\nHIT +3\nDamage againts Challenging Champions +100",
     type: "Card",
   },
   "Dustiness Card": {
@@ -134,7 +134,7 @@ export const itemsObject: TItems = {
     name: "Eddga Card",
     category: "Shoes",
     description:
-      "Max HP -5.00% Infinite Endure (won't be stopped or knocked back when taking a hit)",
+      "Max HP -5.00%\nInfinite Endure (won't be stopped or knocked back when taking a hit)",
     type: "Card",
   },
   "Elder Willow Card": {
@@ -146,14 +146,14 @@ export const itemsObject: TItems = {
   "Fabre Card": {
     name: "Fabre Card",
     category: "Primary weapon",
-    description: "VIT +2 Max HP +250",
+    description: "VIT +2\nMax HP +250",
     type: "Card",
   },
   "Familiar Card": {
     name: "Familiar Card",
     category: "Primary weapon",
     description:
-      "ATK +5 MATK +5 Your attacks have a 5% chance to inflict Dark on the enemies.",
+      "ATK +5\nMATK +5\nYour attacks have a 5% chance to inflict Dark on the enemies.",
     type: "Card",
   },
   "Flora Card": {
@@ -165,7 +165,7 @@ export const itemsObject: TItems = {
   "Goblin (Archer) Card": {
     name: "Goblin (Archer) Card",
     category: "Primary weapon",
-    description: "CRI.DMG +10.00% Crit against Undead monsters +7",
+    description: "CRI.DMG +10.00%\nCrit against Undead monsters +7",
     type: "Card",
   },
   "Goblin Card": {
@@ -184,13 +184,13 @@ export const itemsObject: TItems = {
   "Goblin Steamrider Card": {
     name: "Goblin Steamrider Card",
     category: "Primary weapon",
-    description: "CRI.DMG +10.00% Crit against Formless monsters +7",
+    description: "CRI.DMG +10.00%\nCrit against Formless monsters +7",
     type: "Card",
   },
   "Golem Card": {
     name: "Golem Card",
     category: "Primary weapon",
-    description: "ATK +25 MATK +25 Weapon unbreakable.",
+    description: "ATK +25\nMATK +25\nWeapon unbreakable.",
     type: "Card",
   },
   "Ground Petite Card": {
@@ -203,26 +203,26 @@ export const itemsObject: TItems = {
     name: "Gryphon Card",
     category: "Primary weapon",
     description:
-      "FLEE +2 CRI +7 When you take Physical damage, there is a 3% chance to auto cast Bowling Bash Lv.5",
+      "FLEE +2\nCRI +7\nWhen you take Physical damage, there is a 3% chance to auto cast Bowling Bash Lv.5",
     type: "Card",
   },
   "Highest General Card": {
     name: "Highest General Card",
     category: "Primary weapon",
-    description: "MATK +25 MATK +5.00% For every refinement +3, MATK +1%",
+    description: "MATK +25\nMATK +5.00%\nFor every refinement +3, MATK +1%",
     type: "Card",
   },
   "Hornet Card": {
     name: "Hornet Card",
     category: "Primary weapon",
-    description: "STR +2 Damage to Wind Monsters +5.00%.",
+    description: "STR +2\nDamage to Wind Monsters +5.00%.",
     type: "Card",
   },
   "Hunter Fly Card": {
     name: "Hunter Fly Card",
     category: "Primary weapon",
     description:
-      "ATK +25 MATK +25 Your attack have a 3% chance to heal yourself for 15% of the damage to enemies.",
+      "ATK +25\nMATK +25\nYour attack have a 3% chance to heal yourself for 15% of the damage to enemies.",
     type: "Card",
   },
   "Hydra Card": {
@@ -235,7 +235,7 @@ export const itemsObject: TItems = {
     name: "Infernal Nightmare Card",
     category: "Shoes",
     description:
-      "AGI +2 Max HP +4.00% When you take Physical damage, there is a 10% chance to auto cast Holy Light Lv.3",
+      "AGI +2\nMax HP +4.00%\nWhen you take Physical damage, there is a 10% chance to auto cast Holy Light Lv.3",
     type: "Card",
   },
   "Isis Card": {
@@ -247,26 +247,26 @@ export const itemsObject: TItems = {
   "Kobold Archer Card": {
     name: "Kobold Archer Card",
     category: "Primary weapon",
-    description: "CRI.DMG +10.00% Crit against Plant monsters +7",
+    description: "CRI.DMG +10.00%\nCrit against Plant monsters +7",
     type: "Card",
   },
   "Kobold Leader Card": {
     name: "Kobold Leader Card",
     category: "Primary weapon",
-    description: "Damage against Kobold +20% Damage against all monsters +8%",
+    description: "Damage against Kobold +20%\nDamage against all monsters +8%",
     type: "Card",
   },
   "Lunatic Card": {
     name: "Lunatic Card",
     category: "Primary weapon",
-    description: "LUK +1 CRI +1 FLEE +1",
+    description: "LUK +1\nCRI +1\nFLEE +1",
     type: "Card",
   },
   "Magnolia Card": {
     name: "Magnolia Card",
     category: "Primary weapon",
     description:
-      "ATK +10 MATK +10 Your attacks have a 5% chance to inflict Curse on the enemies.",
+      "ATK +10\nMATK +10\nYour attacks have a 5% chance to inflict Curse on the enemies.",
     type: "Card",
   },
   "Mandragora Card": {
@@ -279,14 +279,14 @@ export const itemsObject: TItems = {
     name: "Marc Card",
     category: "Armor",
     description:
-      "Water Damage Resist +10.00% Max HP +3.00% Immune to Freeze effect",
+      "Water Damage Resist +10.00%\nMax HP +3.00% Immune to Freeze effect",
     type: "Card",
   },
   "Marina Card": {
     name: "Marina Card",
     category: "Primary weapon",
     description:
-      "ATK +15 MATK +15 Your attacks have a 5% chance to freeze the enemies.",
+      "ATK +15\nMATK +15\nYour attacks have a 5% chance to freeze the enemies.",
     type: "Card",
   },
   "Marse Card": {
@@ -299,26 +299,26 @@ export const itemsObject: TItems = {
     name: "Maya Card",
     category: "Secondary",
     description:
-      "When you take magic damage, 20% of that damage is deflected back to the enemy. For every 1 VIT you have, the deflected damage is increased by 0.2%, up to 40%",
+      "When you take magic damage, 20% of that damage is deflected back to the enemy.\nFor every 1 VIT you have, the deflected damage is increased by 0.2%, up to 40%",
     type: "Card",
   },
   "Metaller Card": {
     name: "Metaller Card",
     category: "Primary weapon",
     description:
-      "ATK +25 MATK +25 Your attacks have a 5% chance to silence the enemies.",
+      "ATK +25\nMATK +25\nYour attacks have a 5% chance to silence the enemies.",
     type: "Card",
   },
   "Minorous Card": {
     name: "Minorous Card",
     category: "Primary weapon",
-    description: "ATK +20 MATK +20 Damage to Large Monsters +18.00%",
+    description: "ATK +20\nMATK +20\nDamage to Large Monsters +18.00%",
     type: "Card",
   },
   "Moonlight Flower Card": {
     name: "Moonlight Flower Card",
     category: "Shoes",
-    description: "MSPD +20.00% Max HP +5.00%",
+    description: "MSPD +20.00%\nMax HP +5.00%",
     type: "Card",
   },
   "Mummy Card": {
@@ -338,7 +338,7 @@ export const itemsObject: TItems = {
     name: "Orc Lord Card",
     category: "Armor",
     description:
-      "When you take melee physical basic attack damage, 20% that damage is deflected to the enemy. For every 1 Vitality you have, the deflected damage is increased by 0.2%",
+      "When you take melee physical basic attack damage, 20% that damage is deflected to the enemy.\nFor every 1 Vitality you have, the deflected damage is increased by 0.2%",
     type: "Card",
   },
   "Orc Skeleton Card": {
@@ -357,7 +357,7 @@ export const itemsObject: TItems = {
     name: "Osiris Card",
     category: "Accessory",
     description:
-      "When you take fatal skill damage, your HP locks at 1 and you cannot move or release skills for 3 seconds. You are invincible during this 3-seconds period, and you HP as well as SP will recover to 70% (3-minutes cooldown)",
+      "When you take fatal skill damage, your HP locks at 1 and you cannot move or release skills for 3 seconds.\nYou are invincible during this 3-seconds period, and you HP as well as SP will recover to 70% (3-minutes cooldown)",
     type: "Card",
   },
   "Peco Peco Egg Card": {
@@ -369,40 +369,40 @@ export const itemsObject: TItems = {
   "Phen Card": {
     name: "Phen Card",
     category: "Accessory",
-    description: "Variable CT +25.00% Won't be interrupted while casting",
+    description: "Variable CT +25.00%\nWon't be interrupted while casting",
     type: "Card",
   },
   "Phreeoni Card": {
     name: "Phreeoni Card",
     category: "Primary weapon",
     description:
-      "HIT +100 Every one HIT increases 0.05% physcial damage up to 12% Neglects Parry and FLEE",
+      "HIT +100\nEvery one HIT increases 0.05% physcial damage up to 12% Neglects Parry and FLEE",
     type: "Card",
   },
   "Plankton Card": {
     name: "Plankton Card",
     category: "Primary weapon",
     description:
-      "ATK +15 MATK +15 Your attacks have a 5% chance to inclict Sleep on the enemies.",
+      "ATK +15\nMATK +15\nYour attacks have a 5% chance to inclict Sleep on the enemies.",
     type: "Card",
   },
   "Requiem Card": {
     name: "Requiem Card",
     category: "Primary weapon",
     description:
-      "ATK +25 MATK +25 Your attacks have a 5% chance to inflict Fear on the enemies.",
+      "ATK +25\nMATK +25\nYour attacks have a 5% chance to inflict Fear on the enemies.",
     type: "Card",
   },
   "Rotar Zairo Card": {
     name: "Rotar Zairo Card",
     category: "Primary weapon",
-    description: "CRI.DMG +10.00% Crit against Fish monsters +7",
+    description: "CRI.DMG +10.00%\nCrit against Fish monsters +7",
     type: "Card",
   },
   "Savage Babe Card": {
     name: "Savage Babe Card",
     category: "Primary weapon",
-    description: "ATK +5 MATK +5 Your attacks have a 2% chance to stun enemies",
+    description: "ATK +5\nMATK +5\nYour attacks have a 2% chance to stun enemies",
     type: "Card",
   },
   "Scorpion Card": {
@@ -422,39 +422,39 @@ export const itemsObject: TItems = {
     name: "Skeleton Card",
     category: "Primary weapon",
     description:
-      "ATK +10 MATK +10 Your attacks have a 2% chance to stun the enemies.",
+      "ATK +10\nMATK +10\nYour attacks have a 2% chance to stun the enemies.",
     type: "Card",
   },
   "Skeleton Worker Card": {
     name: "Skeleton Worker Card",
     category: "Primary weapon",
-    description: "ATK +20 MATK +20 Damage to Medium Monsters +18.00%",
+    description: "ATK +20\nMATK +20\nDamage to Medium Monsters +18.00%",
     type: "Card",
   },
   "Soldier Skeleton Card": {
     name: "Soldier Skeleton Card",
     category: "Primary weapon",
-    description: "CRI +9 CRI.DMG +5.00%",
+    description: "CRI +9\nCRI.DMG +5.00%",
     type: "Card",
   },
   "Steel Chonchon Card": {
     name: "Steel Chonchon Card",
     category: "Armor",
-    description: "Max HP +3.00% Wind Damage Resist +5.00%",
+    description: "Max HP +3.00%\nWind Damage Resist +5.00%",
     type: "Card",
   },
   "Steel Fur Grizzly Card": {
     name: "Steel Fur Grizzly Card",
     category: "Headgear",
     description:
-      "VIT +5 When your HP is below 30%, all incoming damage except Status Effects decreased by 10%",
+      "VIT +5\nWhen your HP is below 30%, all incoming damage except Status Effects decreased by 10%",
     type: "Card",
   },
   "Stem Worm Card": {
     name: "Stem Worm Card",
     category: "Accessory",
     description:
-      "Your Physical attacks have a 3% chance to auto cast Red Cut Lv.1. If you have learned this skill, your auto cast the highest level you've learned instead",
+      "Your Physical attacks have a 3% chance to auto cast Red Cut Lv.1.\nIf you have learned this skill, your auto cast the highest level you've learned instead",
     type: "Card",
   },
   "Strouf Card": {
@@ -466,13 +466,13 @@ export const itemsObject: TItems = {
   "Swordfish Card": {
     name: "Swordfish Card",
     category: "Armor",
-    description: "DEF +1 You can change you armor to Water attribute",
+    description: "DEF +1\nYou can change you armor to Water attribute",
     type: "Card",
   },
   "Thief Bug Female Card": {
     name: "Thief Bug Female Card",
     category: "Primary weapon",
-    description: "AGI +1 FLEE +1 ATK +5",
+    description: "AGI +1\nFLEE +1\nATK +5",
     type: "Card",
   },
   "Vadon Card": {
@@ -484,19 +484,19 @@ export const itemsObject: TItems = {
   "Vagabond Wolf Card": {
     name: "Vagabond Wolf Card",
     category: "Cloak",
-    description: "STR +3 If refined to +12, Physical Damage +3%",
+    description: "STR +3\nIf refined to +12, Physical Damage +3%",
     type: "Card",
   },
   "Whisper Card": {
     name: "Whisper Card",
     category: "Cloak",
-    description: "FLEE +10 Incoming Ghost Damage increased by 25%",
+    description: "FLEE +10\nIncoming Ghost Damage increased by 25%",
     type: "Card",
   },
   "Wild Rose Card": {
     name: "Wild Rose Card",
     category: "Shoes",
-    description: "AGI +2 FLEE +10",
+    description: "AGI +2\nFLEE +10",
     type: "Card",
   },
   "Willow Card": {
@@ -509,13 +509,13 @@ export const itemsObject: TItems = {
     name: "Wind Ghost Card",
     category: "Accessory",
     description:
-      "Your Physical attacks have a 3% chance to auto cast Jupiter Thunder Lv.1. If you have learned this skill, your auto cast the highest level you've learned instead",
+      "Your Physical attacks have a 3% chance to auto cast Jupiter Thunder Lv.1.\nIf you have learned this skill, your auto cast the highest level you've learned instead",
     type: "Card",
   },
   "Wolf Card": {
     name: "Wolf Card",
     category: "Primary weapon",
-    description: "ATK +15 CRI +1",
+    description: "ATK +15\nCRI +1",
     type: "Card",
   },
   "Worm Tail Card": {
@@ -527,14 +527,23 @@ export const itemsObject: TItems = {
   "Wraith Card": {
     name: "Wraith Card",
     category: "Accessory",
-    description: "MATK +5 MDMG +1.00%",
+    description: "MATK +5\nMDMG +1.00%",
     type: "Card",
   },
   "Zenorc Card": {
     name: "Zenorc Card",
     category: "Primary weapon",
     description:
-      "ATK +10 MATK +10 Your attacks have a 5% chance to inflict Poison on the enemies.",
+      "ATK +10\nMATK +10\nYour attacks have a 5% chance to inflict Poison on the enemies.",
     type: "Card",
   },
 };
+
+const temp = [];
+for (const key in itemsObject) {
+  if (Object.prototype.hasOwnProperty.call(itemsObject, key)) {
+    const value = itemsObject[key];
+    temp.push({ ...value, name: key });
+  }
+}
+export const itemsArray = temp;

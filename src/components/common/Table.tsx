@@ -121,7 +121,7 @@ function Td({
   return (
     <td
       className={twMerge(
-        "whitespace-nowrap px-3 py-4 text-sm text-gray-900",
+        "whitespace-pre-wrap px-3 py-4 text-sm text-gray-900",
         className
       )}
     >
