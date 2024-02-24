@@ -1,24 +1,25 @@
-import { ChangeEventHandler } from "react";
 import { twMerge } from "tailwind-merge";
 
 type Props = {
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onChange: (bool: boolean) => void;
   label?: React.ReactNode;
   placeholder?: string;
   className?: string;
   inputClassName?: string;
   labelClassName?: string;
+  defaultValue?: boolean;
 };
-const InputText: React.FC<Props> = ({
+const InputBoolean: React.FC<Props> = ({
   onChange,
   label,
   placeholder,
   className,
   inputClassName,
   labelClassName,
+  defaultValue,
 }) => {
   return (
-    <div className={twMerge("", className)}>
+    <div className={twMerge("flex gap-1", className)}>
       {label && (
         <div
           className={twMerge(
@@ -30,18 +31,19 @@ const InputText: React.FC<Props> = ({
         </div>
       )}
       <input
-        maxLength={60}
-        type="text"
+        defaultChecked={defaultValue}
+        type="checkbox"
         className={twMerge(
-          "h-[40px] block w-full rounded-md border-0 py-1.5 pl-3 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300",
-          "placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+          "block w-[16px] rounded-md border-0 text-gray-900",
           inputClassName
         )}
         placeholder={placeholder || "Type here..."}
-        onChange={onChange}
+        onChange={(e) => {
+          onChange(e.target.checked);
+        }}
       />
     </div>
   );
 };
 
-export default InputText;
+export default InputBoolean;

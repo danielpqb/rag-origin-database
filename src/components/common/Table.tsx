@@ -50,13 +50,21 @@ function THead({
                 onClick && onClick(name);
               }}
             >
-              {name}
-              {sortIcon?.type === "ASC" && sortIcon?.columnName === name.toLowerCase() && (
-                <ChevronDownIcon width={13} />
-              )}
-              {sortIcon?.type === "DES" && sortIcon?.columnName === name.toLowerCase() && (
-                <ChevronUpIcon width={13} />
-              )}
+              <div className="flex flex-row items-center justify-between gap-2">
+                <span>{name}</span>
+                {sortIcon?.type === "ASC" &&
+                  sortIcon?.columnName === name.toLowerCase() && (
+                    <span>
+                      <ChevronDownIcon width={16} />
+                    </span>
+                  )}
+                {sortIcon?.type === "DES" &&
+                  sortIcon?.columnName === name.toLowerCase() && (
+                    <span>
+                      <ChevronUpIcon width={16} />
+                    </span>
+                  )}
+              </div>
             </th>
           );
         })}

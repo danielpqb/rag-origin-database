@@ -5,6 +5,8 @@ import { TBody, THead, Table, Td, Tr } from "./common/Table";
 import { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import InputText from "./common/InputText";
+import { TMonsterAtributes } from "@/types/monster";
+import InputBoolean from "./common/InputBoolean";
 
 const columnNameKeys = {
   Lv: "lv",
@@ -22,25 +24,55 @@ const columnNameKeys = {
 } as Record<string, string>;
 
 export function MonstersTable() {
-  const [sortBy, setSortBy] = useState("");
+  const [sortBy, setSortBy] = useState("lv");
   const [sortRule, setSortRule] = useState("ASC" as "ASC" | "DES");
   const [filterTerm, setFilterTerm] = useState("");
+  const [filterKeys, setFilterKeys] = useState({
+    lv: true,
+    name: true,
+    hp: true,
+    type: true,
+    property: true,
+    size: true,
+    atk: true,
+    def: true,
+    hit: true,
+    matk: true,
+    mdef: true,
+    flee: true,
+  });
+
+  console.log(filterKeys);
 
   return (
-    <div>
-      <div>
-        <div>
-          <InputText
-            label={
-              <>
-                <MagnifyingGlassIcon width={18} />
-                <span className="ml-1">Search</span>
-              </>
-            }
-            onChange={(e) => {
-              setFilterTerm(e.target.value);
-            }}
-          />
+    <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
+        <InputText
+          label={
+            <>
+              <MagnifyingGlassIcon width={18} />
+              <span className="ml-1">Search</span>
+            </>
+          }
+          onChange={(e) => {
+            setFilterTerm(e.target.value);
+          }}
+        />
+        <div className="flex w-full justify-between">
+          {Object.keys(columnNameKeys).map((key) => (
+            <InputBoolean
+              key={key}
+              defaultValue={
+                filterKeys[columnNameKeys[key] as keyof TMonsterAtributes]
+              }
+              label={key}
+              onChange={(bool) => {
+                setFilterKeys((old) => {
+                  return { ...old, [columnNameKeys[key]]: bool };
+                });
+              }}
+            />
+          ))}
         </div>
       </div>
       <Table>
@@ -56,35 +88,23 @@ export function MonstersTable() {
                   setSortRule("DES");
                   break;
                 case "DES":
-                  setSortBy("");
+                  setSortBy("lv");
+                  setSortRule("ASC");
                   break;
               }
             }
           }}
-          columnNames={[
-            "Lv",
-            "Name",
-            "Hp",
-            "Type",
-            "Property",
-            "Size",
-            "Atk",
-            "Def",
-            "Hit",
-            "Matk",
-            "Mdef",
-            "Flee",
-          ]}
+          columnNames={Object.keys(columnNameKeys)}
         />
         <TBody>
           {monstersArray
             .filter((monster) => {
-              for (const key in monster) {
+              for (const k in monster) {
+                const key = k as keyof TMonsterAtributes;
                 if (Object.prototype.hasOwnProperty.call(monster, key)) {
                   if (
-                    String((monster as any)[key])
-                      .toLowerCase()
-                      .includes(filterTerm)
+                    filterKeys[key] &&
+                    String(monster[key]).toLowerCase().includes(filterTerm)
                   ) {
                     return true;
                   }
@@ -113,19 +133,12 @@ export function MonstersTable() {
             })
             .map((monster) => {
               return (
-                <Tr>
-                  <Td>{monster.lv}</Td>
-                  <Td>{monster.name}</Td>
-                  <Td>{monster.hp}</Td>
-                  <Td>{monster.type}</Td>
-                  <Td>{monster.property}</Td>
-                  <Td>{monster.size}</Td>
-                  <Td>{monster.atk}</Td>
-                  <Td>{monster.def}</Td>
-                  <Td>{monster.hit}</Td>
-                  <Td>{monster.matk}</Td>
-                  <Td>{monster.mdef}</Td>
-                  <Td>{monster.flee}</Td>
+                <Tr key={monster.name}>
+                  {Object.values(columnNameKeys).map((value, idx) => (
+                    <Td key={idx}>
+                      {`${monster[value as keyof TMonsterAtributes]}`}
+                    </Td>
+                  ))}
                 </Tr>
               );
             })}
